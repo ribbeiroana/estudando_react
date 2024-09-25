@@ -1,0 +1,38 @@
+npm create vite@latest . -- --template react
+
+Deletar arquivos desnecessários 
+
+Componente Funcional 
+
+<StrictMode> - para testes de renderização
+
+Interpolações - injetar javaScript no Html
+
+Props = propriedade, atributo
+(Quando passa atributos atráves dos componentes e recupera nos parâmetros da função )
+
+Estado = memória de um componente - que armazena um valor que sempre que tem um alteração o React entende que ele deve renderizar novamente aquele componente.
+Estado - useState 
+
+Rotas - React Dom - npm i react-router-dom
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from '../components/Home'
+// fazer a importação das páginas para renderizar 
+
+function App() {
+  return(
+    <div>
+    <BrowserRouter>
+    <Routes>
+    <Route path='/' element={<Home/>}></Route> // renderiza a home 
+    <Route path='/sobre' element={<Sobre/>}></Route> 
+    <Route path='/contato' element={<Contato/>}></Route> 
+    </Routes>
+    </BrowserRouter>
+    </div>
+  )
+}
+
+Usando esse roteamento você pode usar normalmente os links no component Menu 
+Igual um menu no html 
